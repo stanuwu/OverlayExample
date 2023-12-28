@@ -1,9 +1,9 @@
 ﻿using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
-using GameBarOverlay;
-using GameBarOverlay.Render;
-using GameBarOverlay.Render.Font;
+using HijackOverlay;
+using HijackOverlay.Render;
+using HijackOverlay.Render.Font;
 using Application = System.Windows.Application;
 
 namespace OverlayExample
