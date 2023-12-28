@@ -21,7 +21,7 @@ namespace OverlayExample
             var test = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789?!";
             var font = new FontRenderer("Arial", 32);
             var font2 = new FontRenderer("Arial", 64);
-            var font3 = new FontRenderer("Arial", 300);
+            // var font3 = new FontRenderer("Arial", 300);
             var font4 = new FontRenderer("Bahnschrift", 64);
             var font5 = new FontRenderer("Algerian", 64);
 
@@ -39,6 +39,12 @@ namespace OverlayExample
                 Renderer.BufferColorRect(bufferBuilder, width - 100, height - 100, 100, 100, Color.Red);
                 Renderer.End(bufferBuilder);
 
+                Renderer.DrawRoundedColorRect(1800, 300, 300, 300, 25, Color.Red);
+                Renderer.DrawColorCircle(2300, 300, 300, Color.Red);
+
+                Renderer.DrawRoundedOutlineColorRect(2800, 300, 300, 300, 25, 3, Color.Red);
+                Renderer.DrawOutlineColorCircle(3300, 300, 300, 3, Color.Red);
+
                 bufferBuilder = Renderer.StartPositionColorLines();
                 Renderer.BufferColorLine(bufferBuilder, 300, 300, 600, 600, rainbow);
                 Renderer.BufferColorGradientLineGroup(bufferBuilder,
@@ -51,7 +57,7 @@ namespace OverlayExample
 
                 font5.DrawString("This is a test text.", 300, 900, rainbow);
                 font4.DrawString("This is a test text.", 300, 800, Color.Blue, Color.Purple);
-                font3.DrawString("Large Test", 300, 1000, Color.Black);
+                // font3.DrawString("Large Test", 300, 1000, Color.Black);
                 font2.DrawString(test, 300, 1350, Color.Red);
                 font.DrawString(test, 300, 1450, Color.Aqua, Color.Blue);
 
